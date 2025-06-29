@@ -4,6 +4,8 @@
   <meta charset="UTF-8">
   <title>Coming Soon</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Font Awesome CDN for social media icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-..." crossorigin="anonymous" referrerpolicy="no-referrer" />
   <style>
     body {
       margin: 0;
@@ -16,42 +18,205 @@
       align-items: center;
       justify-content: center;
       text-align: center;
-      height: 100vh;
+      min-height: 100vh;
     }
 
     h1 {
       font-size: 2.5rem;
       margin-bottom: 2rem;
       max-width: 90%;
+      padding: 0 1rem;
     }
 
-    .links {
-      margin-top: 1rem;
+    .social-row {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1rem;
+      padding: 1rem;
     }
 
-    .links a {
-      display: block;
+    .social-block {
+      background-color: rgba(255, 255, 255, 0.05);
+      border-radius: 8px;
+      padding: 1rem;
+      width: 120px;
+      text-align: center;
+      transition: background-color 0.3s ease;
+    }
+
+    .social-block:hover {
+      background-color: rgba(255, 255, 255, 0.15);
+    }
+
+    .social-block a {
       color: white;
       text-decoration: none;
-      font-size: 1.2rem;
-      margin: 10px 0;
-      transition: opacity 0.3s ease;
     }
 
-    .links a:hover {
-      opacity: 0.7;
+    .social-block i {
+      font-size: 2rem;
+      margin-top: 0.5rem;
+    }
+
+    .social-title {
+      font-size: 1rem;
+      margin-bottom: 0.3rem;
+    }
+
+    @media (max-width: 600px) {
+      .social-row {
+        flex-direction: column;
+        align-items: center;
+      }
     }
   </style>
 </head>
 <body>
-  <h1>Currently working on my website. Please stay tuned! 🙏</h1>
+  <h1>Currently working on my website. Please stay tuned!</h1>
 
-  <div class="links">
-    <a href="https://instagram.com/raymond_oscar" target="_blank">Instagram</a>
-    <a href="https://instagram.com/kreatif3d.id" target="_blank">Kreatif 3D Instagram</a>
-    <a href="https://youtube.com/@raymondoscarlim" target="_blank">YouTube</a>
-    <a href="https://www.linkedin.com/in/im-raymond-lim/" target="_blank">LinkedIn</a>
-    <a href="https://open.spotify.com/user/21gsqg6x7zdxwvqyhvctupwvi?si=7b0dc3852e7a4712" target="_blank">Spotify</a>
+  <div class="social-row">
+    <div class="social-block">
+      <a href="https://instagram.com/raymond_oscar" target="_blank">
+        <div class="social-title">Instagram</div>
+        <i class="fab fa-instagram"></i>
+      </a>
+    </div>
+    <div class="social-block">
+      <a href="https://instagram.com/kreatif3d.id" target="_blank">
+        <div class="social-title">Kreatif 3D Instagram</div>
+        <i class="fab fa-instagram"></i>
+      </a>
+    </div>
+    <div class="social-block">
+      <a href="https://youtube.com/@raymondoscarlim" target="_blank">
+        <div class="social-title">YouTube</div>
+        <i class="fab fa-youtube"></i>
+      </a>
+    </div>
+    <div class="social-block">
+      <a href="https://www.linkedin.com/in/im-raymond-lim/" target="_blank">
+        <div class="social-title">LinkedIn</div>
+        <i class="fab fa-linkedin"></i>
+      </a>
+    </div>
+    <div class="social-block">
+      <a href="<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Coming Soon</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Font Awesome CDN for social media icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-..." crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: #001f3f; /* Navy blue */
+      color: white;
+      font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      min-height: 100vh;
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      margin-bottom: 2rem;
+      max-width: 90%;
+      padding: 0 1rem;
+    }
+
+    .social-row {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1rem;
+      padding: 1rem;
+    }
+
+    .social-block {
+      background-color: rgba(255, 255, 255, 0.05);
+      border-radius: 8px;
+      padding: 1rem;
+      width: 120px;
+      text-align: center;
+      transition: background-color 0.3s ease;
+    }
+
+    .social-block:hover {
+      background-color: rgba(255, 255, 255, 0.15);
+    }
+
+    .social-block a {
+      color: white;
+      text-decoration: none;
+    }
+
+    .social-block i {
+      font-size: 2rem;
+      margin-top: 0.5rem;
+    }
+
+    .social-title {
+      font-size: 1rem;
+      margin-bottom: 0.3rem;
+    }
+
+    @media (max-width: 600px) {
+      .social-row {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+  </style>
+</head>
+<body>
+  <h1>Currently working on my website. Please stay tuned!</h1>
+
+  <div class="social-row">
+    <div class="social-block">
+      <a href="https://instagram.com/raymond_oscar" target="_blank">
+        <div class="social-title">Instagram</div>
+        <i class="fab fa-instagram"></i>
+      </a>
+    </div>
+    <div class="social-block">
+      <a href="https://instagram.com/kreatif3d.id" target="_blank">
+        <div class="social-title">Kreatif 3D Instagram</div>
+        <i class="fab fa-instagram"></i>
+      </a>
+    </div>
+    <div class="social-block">
+      <a href="https://youtube.com/@raymondoscarlim" target="_blank">
+        <div class="social-title">YouTube</div>
+        <i class="fab fa-youtube"></i>
+      </a>
+    </div>
+    <div class="social-block">
+      <a href="https://www.linkedin.com/in/im-raymond-lim/" target="_blank">
+        <div class="social-title">LinkedIn</div>
+        <i class="fab fa-linkedin"></i>
+      </a>
+    </div>
+    <div class="social-block">
+      <a href="https://open.spotify.com/user/21gsqg6x7zdxwvqyhvctupwvi?si=7b0dc3852e7a4712" target="_blank">
+        <div class="social-title">Spotify</div>
+        <i class="fab fa-spotify"></i>
+      </a>
+    </div>
+  </div>
+</body>
+</html>
+" target="_blank">
+        <div class="social-title">Spotify</div>
+        <i class="fab fa-spotify"></i>
+      </a>
+    </div>
   </div>
 </body>
 </html>
