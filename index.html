@@ -2,80 +2,92 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Coming Soon</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <!-- Font Awesome for icons -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <!-- Font Awesome for social icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous" />
 
+  <!-- Neue Haas Grotesk fallback -->
   <style>
+    @font-face {
+      font-family: 'Neue Haas Grotesk Display Pro';
+      src: local('Neue Haas Grotesk Display Pro'),
+           local('Helvetica Neue'),
+           local('Helvetica'),
+           local('Arial');
+      font-weight: 700;
+    }
+
     body {
       margin: 0;
       padding: 0;
-      background-color: #001f3f; /* Navy Blue */
+      background-color: #001f3f; /* Navy blue */
       color: white;
-      font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+      font-family: 'Neue Haas Grotesk Display Pro', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+      text-align: center;
       display: flex;
       flex-direction: column;
       align-items: center;
-      justify-content: center;
       min-height: 100vh;
-      text-align: center;
+      box-sizing: border-box;
+      padding: 2rem 1rem;
     }
 
     h1 {
-      font-size: 1.5rem; /* Smaller message text */
-      font-weight: 300;
-      margin: 0 1rem 2rem;
+      font-size: 1.4rem;
+      font-weight: 700;
+      margin-bottom: 2rem;
       max-width: 90%;
     }
 
     .social-row {
       display: flex;
+      justify-content: space-between;
       flex-wrap: nowrap;
-      justify-content: space-around;
-      align-items: center;
+      gap: 0.5rem;
       width: 100%;
-      max-width: 900px;
-      padding: 0 1rem;
-      box-sizing: border-box;
+      max-width: 1000px;
     }
 
     .social-block {
       flex: 1;
       min-width: 60px;
-      margin: 0 5px;
-      padding: 0.8rem 0.5rem;
       background-color: rgba(255, 255, 255, 0.05);
       border-radius: 8px;
+      padding: 1rem 0.5rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
       transition: background-color 0.3s ease;
     }
 
     .social-block:hover {
-      background-color: rgba(255, 255, 255, 0.15);
+      background-color: rgba(255, 255, 255, 0.1);
+    }
+
+    .social-block a {
+      text-decoration: none;
+      color: white;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
     }
 
     .social-title {
       font-size: 0.9rem;
+      font-weight: 600;
       margin-bottom: 0.5rem;
     }
 
     .social-block i {
-      font-size: 1.5rem;
-    }
-
-    a {
-      text-decoration: none;
-      color: white;
+      font-size: 1.6rem;
     }
 
     @media (max-width: 600px) {
       h1 {
-        font-size: 1.2rem;
-      }
-
-      .social-block {
-        padding: 0.6rem 0.3rem;
+        font-size: 1.1rem;
       }
 
       .social-title {
@@ -83,7 +95,7 @@
       }
 
       .social-block i {
-        font-size: 1.2rem;
+        font-size: 1.3rem;
       }
     }
   </style>
@@ -103,6 +115,12 @@
       <a href="https://instagram.com/kreatif3d.id" target="_blank">
         <div class="social-title">Kreatif 3D Instagram</div>
         <i class="fab fa-instagram"></i>
+      </a>
+    </div>
+    <div class="social-block">
+      <a href="https://youtube.com/@raymondoscarlim" target="_blank">
+        <div class="social-title">YouTube</div>
+        <i class="fab fa-youtube"></i>
       </a>
     </div>
     <div class="social-block">
