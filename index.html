@@ -1,47 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Coming Soon</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- Font Awesome CDN for social media icons -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-..." crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <!-- Font Awesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
   <style>
     body {
       margin: 0;
       padding: 0;
-      background-color: #001f3f; /* Navy blue */
+      background-color: #001f3f; /* Navy Blue */
       color: white;
       font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      text-align: center;
       min-height: 100vh;
+      text-align: center;
     }
 
     h1 {
-      font-size: 1.8rem;
-      margin-bottom: 2rem;
+      font-size: 1.5rem; /* Smaller message text */
+      font-weight: 300;
+      margin: 0 1rem 2rem;
       max-width: 90%;
-      padding: 0 1rem;
     }
 
     .social-row {
       display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 1rem;
-      padding: 1rem;
+      flex-wrap: nowrap;
+      justify-content: space-around;
+      align-items: center;
+      width: 100%;
+      max-width: 900px;
+      padding: 0 1rem;
+      box-sizing: border-box;
     }
 
     .social-block {
+      flex: 1;
+      min-width: 60px;
+      margin: 0 5px;
+      padding: 0.8rem 0.5rem;
       background-color: rgba(255, 255, 255, 0.05);
       border-radius: 8px;
-      padding: 1rem;
-      width: 120px;
-      text-align: center;
       transition: background-color 0.3s ease;
     }
 
@@ -49,30 +55,41 @@
       background-color: rgba(255, 255, 255, 0.15);
     }
 
-    .social-block a {
-      color: white;
-      text-decoration: none;
+    .social-title {
+      font-size: 0.9rem;
+      margin-bottom: 0.5rem;
     }
 
     .social-block i {
-      font-size: 2rem;
-      margin-top: 0.5rem;
+      font-size: 1.5rem;
     }
 
-    .social-title {
-      font-size: 1rem;
-      margin-bottom: 0.3rem;
+    a {
+      text-decoration: none;
+      color: white;
     }
 
     @media (max-width: 600px) {
-      .social-row {
-        flex-direction: column;
-        align-items: center;
+      h1 {
+        font-size: 1.2rem;
+      }
+
+      .social-block {
+        padding: 0.6rem 0.3rem;
+      }
+
+      .social-title {
+        font-size: 0.8rem;
+      }
+
+      .social-block i {
+        font-size: 1.2rem;
       }
     }
   </style>
 </head>
 <body>
+
   <h1>Currently working on my website. Please stay tuned!</h1>
 
   <div class="social-row">
@@ -89,23 +106,12 @@
       </a>
     </div>
     <div class="social-block">
-      <a href="https://youtube.com/@raymondoscarlim" target="_blank">
-        <div class="social-title">YouTube</div>
-        <i class="fab fa-youtube"></i>
-      </a>
-    </div>
-    <div class="social-block">
       <a href="https://linkedin.com/in/im-raymond-lim" target="_blank">
         <div class="social-title">LinkedIn</div>
         <i class="fab fa-linkedin"></i>
       </a>
     </div>
-    <div class="social-block">
-      <a href="https://open.spotify.com/user/21gsqg6x7zdxwvqyhvctupwvi?si=ebc6f2916ae04fa1" target="_blank">
-        <div class="social-title">Spotify</div>
-        <i class="fab fa-spotify"></i>
-      </a>
-    </div>
   </div>
+
 </body>
 </html>
