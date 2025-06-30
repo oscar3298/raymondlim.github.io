@@ -2,134 +2,111 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Coming Soon</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Raymond Lim - Engineering Portfolio</title>
 
-  <!-- Font Awesome for social icons -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous" />
-
-  <!-- Neue Haas Grotesk fallback -->
+  <!-- Adobe Fonts (Neue Haas Grotesk Display Pro, fallback to sans-serif) -->
+  <link rel="stylesheet" href="https://use.typekit.net/xyz123.css"> <!-- Replace with actual Adobe Fonts link -->
   <style>
-    @font-face {
-      font-family: 'Neue Haas Grotesk Display Pro';
-      src: local('Neue Haas Grotesk Display Pro'),
-           local('Helvetica Neue'),
-           local('Helvetica'),
-           local('Arial');
-      font-weight: 700;
-    }
-
     body {
       margin: 0;
-      padding: 0;
-      background-color: #001f3f; /* Navy blue */
-      color: white;
-      font-family: 'Neue Haas Grotesk Display Pro', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-      text-align: center;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      min-height: 100vh;
-      box-sizing: border-box;
-      padding: 2rem 1rem;
+      font-family: "neue-haas-grotesk-display", sans-serif;
     }
 
-    h1 {
-      font-size: 1.4rem;
-      font-weight: 700;
-      margin-bottom: 2rem;
-      max-width: 90%;
-    }
-
-    .social-row {
+    header {
+      background-color: #f5f5f5;
+      padding: 20px;
       display: flex;
       justify-content: space-between;
-      flex-wrap: nowrap;
-      gap: 0.5rem;
-      width: 100%;
-      max-width: 1000px;
-    }
-
-    .social-block {
-      flex: 1;
-      min-width: 60px;
-      background-color: rgba(255, 255, 255, 0.05);
-      border-radius: 8px;
-      padding: 1rem 0.5rem;
-      display: flex;
-      flex-direction: column;
       align-items: center;
-      justify-content: center;
-      transition: background-color 0.3s ease;
     }
 
-    .social-block:hover {
-      background-color: rgba(255, 255, 255, 0.1);
+    .logo {
+      font-size: 28px;
+      font-weight: bold;
+      margin-left: 20px;
     }
 
-    .social-block a {
+    nav {
+      margin-right: 20px;
+    }
+
+    nav a {
+      margin-left: 30px;
       text-decoration: none;
-      color: white;
+      color: #000;
+      font-weight: bold;
+    }
+
+    .main {
       display: flex;
-      flex-direction: column;
+      justify-content: center;
       align-items: center;
+      flex-wrap: wrap;
+      padding: 80px 20px;
     }
 
-    .social-title {
-      font-size: 0.9rem;
-      font-weight: 600;
-      margin-bottom: 0.5rem;
+    .intro {
+      max-width: 500px;
+      margin-right: 50px;
     }
 
-    .social-block i {
-      font-size: 1.6rem;
+    .intro h1 {
+      font-size: 24px;
+      margin-bottom: 20px;
     }
 
-    @media (max-width: 600px) {
-      h1 {
-        font-size: 1.1rem;
+    .intro p {
+      line-height: 1.6;
+      color: #333;
+    }
+
+    .avatar {
+      width: 180px;
+      height: 180px;
+      border-radius: 50%;
+      background-image: url('your-photo.jpg'); /* replace with your actual image file */
+      background-size: cover;
+      background-position: center;
+      background-color: #ccc;
+    }
+
+    @media (max-width: 768px) {
+      .main {
+        flex-direction: column;
+        text-align: center;
       }
 
-      .social-title {
-        font-size: 0.8rem;
+      .intro {
+        margin: 0 0 30px 0;
       }
 
-      .social-block i {
-        font-size: 1.3rem;
+      .avatar {
+        margin: 0 auto;
       }
     }
   </style>
 </head>
 <body>
 
-  <h1>Currently working on my website. Please stay tuned!</h1>
+  <header>
+    <div class="logo">Raymond Lim</div>
+    <nav>
+      <a href="#">Home</a>
+      <a href="#">Projects</a>
+      <a href="#">Blog</a>
+      <a href="#">Contact Me</a>
+    </nav>
+  </header>
 
-  <div class="social-row">
-    <div class="social-block">
-      <a href="https://instagram.com/raymond_oscar" target="_blank">
-        <div class="social-title">Instagram</div>
-        <i class="fab fa-instagram"></i>
-      </a>
+  <main class="main">
+    <div class="intro">
+      <h1>Hi! My name is Raymond.</h1>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus erat dui, efficitur eu justo sit amet, faucibus ultricies quam.</p>
+      <p>Cras convallis urna purus, in ornare leo pulvinar et. Aenean a ipsum odio. Duis posuere vestibulum lectus sit amet maximus.</p>
     </div>
-    <div class="social-block">
-      <a href="https://instagram.com/kreatif3d.id" target="_blank">
-        <div class="social-title">Kreatif 3D Instagram</div>
-        <i class="fab fa-instagram"></i>
-      </a>
-    </div>
-    <div class="social-block">
-      <a href="https://youtube.com/@raymondoscarlim" target="_blank">
-        <div class="social-title">YouTube</div>
-        <i class="fab fa-youtube"></i>
-      </a>
-    </div>
-    <div class="social-block">
-      <a href="https://linkedin.com/in/im-raymond-lim" target="_blank">
-        <div class="social-title">LinkedIn</div>
-        <i class="fab fa-linkedin"></i>
-      </a>
-    </div>
-  </div>
+    <div class="avatar"></div>
+  </main>
 
 </body>
 </html>
