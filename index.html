@@ -5,21 +5,38 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Raymond Lim - Engineering Portfolio</title>
 
-  <!-- Font Awesome for social icons -->
+  <!-- Font Awesome for social & toggle icons -->
   <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 
   <style>
+    :root {
+      --bg-color: #ffffff;
+      --text-color: #000000;
+      --header-bg: #f5f5f5;
+      --social-bg: #efefef;
+      --social-hover: #ddd;
+    }
+
+    body.dark-mode {
+      --bg-color: #1e1e1e;
+      --text-color: #f5f5f5;
+      --header-bg: #111111;
+      --social-bg: #2a2a2a;
+      --social-hover: #444444;
+    }
+
     * {
       box-sizing: border-box;
       margin: 0;
       padding: 0;
+      transition: background-color 0.3s, color 0.3s;
     }
 
     body {
       font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
       font-weight: bold;
-      background-color: #fff;
-      color: #000;
+      background-color: var(--bg-color);
+      color: var(--text-color);
     }
 
     header {
@@ -27,7 +44,7 @@
       justify-content: space-between;
       align-items: center;
       padding: 20px 40px;
-      background-color: #f5f5f5;
+      background-color: var(--header-bg);
       white-space: nowrap;
       overflow-x: auto;
     }
@@ -41,13 +58,22 @@
       display: flex;
       gap: 30px;
       margin-left: auto;
+      margin-right: 20px;
       flex-shrink: 1;
     }
 
     nav a {
       text-decoration: none;
-      color: #000;
+      color: var(--text-color);
       font-size: 18px;
+    }
+
+    .dark-toggle {
+      background: none;
+      border: none;
+      cursor: pointer;
+      font-size: 20px;
+      color: var(--text-color);
     }
 
     .main {
@@ -80,14 +106,13 @@
       width: 180px;
       height: 180px;
       border-radius: 50%;
-      background-image: url('your-photo.jpg'); /* Replace with your photo */
+      background-image: url('profilepicture.jpg'); /* Replace with your image */
       background-size: cover;
       background-position: center;
       background-color: #ccc;
       flex-shrink: 0;
     }
 
-    /* SOCIAL BOXES */
     .social-container {
       display: flex;
       justify-content: space-between;
@@ -98,20 +123,23 @@
     .social-box {
       flex: 1;
       min-width: 70px;
-      background-color: #efefef;
+      background-color: var(--social-bg);
       border-radius: 8px;
       padding: 10px;
       text-align: center;
       transition: background-color 0.2s;
+      color: var(--text-color);
+      text-decoration: none;
     }
 
     .social-box:hover {
-      background-color: #ddd;
+      background-color: var(--social-hover);
     }
 
     .social-box i {
       font-size: 24px;
       margin-bottom: 8px;
+      display: block;
     }
 
     .social-box span {
@@ -167,7 +195,7 @@
       }
 
       .main {
-        flex-direction: column;
+        flex-direction: column-reverse;
         text-align: center;
       }
 
@@ -200,6 +228,9 @@
       <a href="#">Blog</a>
       <a href="#">Contact</a>
     </nav>
+    <button class="dark-toggle" onclick="toggleDarkMode()" aria-label="Toggle dark mode">
+      <i id="toggle-icon" class="fas fa-moon"></i>
+    </button>
   </header>
 
   <main class="main">
@@ -208,19 +239,19 @@
       <p>I’m an engineer passionate about problem-solving, design, and precision. Explore this portfolio to see my work and journey.</p>
 
       <div class="social-container">
-        <a href="https://instagram.com/yourusername" target="_blank" class="social-box">
+        <a href="https://instagram.com/raymond_oscar" target="_blank" class="social-box">
           <i class="fab fa-instagram"></i>
           <span>Instagram</span>
         </a>
-        <a href="https://instagram.com/kreatif3d" target="_blank" class="social-box">
+        <a href="https://instagram.com/kreatif3d.id" target="_blank" class="social-box">
           <i class="fab fa-instagram"></i>
           <span>Kreatif 3D</span>
         </a>
-        <a href="https://linkedin.com/in/yourusername" target="_blank" class="social-box">
+        <a href="https://linkedin.com/in/im-raymond-lim" target="_blank" class="social-box">
           <i class="fab fa-linkedin"></i>
           <span>LinkedIn</span>
         </a>
-        <a href="https://youtube.com/@yourchannel" target="_blank" class="social-box">
+        <a href="https://youtube.com/@raymondoscarlim" target="_blank" class="social-box">
           <i class="fab fa-youtube"></i>
           <span>YouTube</span>
         </a>
@@ -229,6 +260,20 @@
 
     <div class="avatar"></div>
   </main>
+
+  <script>
+    function toggleDarkMode() {
+      document.body.classList.toggle('dark-mode');
+      const icon = document.getElementById('toggle-icon');
+      if (document.body.classList.contains('dark-mode')) {
+        icon.classList.remove('fa-moon');
+        icon.classList.add('fa-sun');
+      } else {
+        icon.classList.remove('fa-sun');
+        icon.classList.add('fa-moon');
+      }
+    }
+  </script>
 
 </body>
 </html>
