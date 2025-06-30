@@ -1,19 +1,234 @@
-<!-- Inside the .intro div, underneath the <p> -->
-<div class="social-container">
-  <a href="https://instagram.com/yourusername" target="_blank" class="social-box">
-    <i class="fab fa-instagram"></i>
-    <span>Instagram</span>
-  </a>
-  <a href="https://instagram.com/kreatif3d" target="_blank" class="social-box">
-    <i class="fab fa-instagram"></i>
-    <span>Kreatif 3D</span>
-  </a>
-  <a href="https://linkedin.com/in/yourusername" target="_blank" class="social-box">
-    <i class="fab fa-linkedin"></i>
-    <span>LinkedIn</span>
-  </a>
-  <a href="https://youtube.com/@yourchannel" target="_blank" class="social-box">
-    <i class="fab fa-youtube"></i>
-    <span>YouTube</span>
-  </a>
-</div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Raymond Lim - Engineering Portfolio</title>
+
+  <!-- Font Awesome for social icons -->
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+      font-weight: bold;
+      background-color: #fff;
+      color: #000;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 40px;
+      background-color: #f5f5f5;
+      white-space: nowrap;
+      overflow-x: auto;
+    }
+
+    .logo {
+      font-size: 28px;
+      flex-shrink: 0;
+    }
+
+    nav {
+      display: flex;
+      gap: 30px;
+      margin-left: auto;
+      flex-shrink: 1;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #000;
+      font-size: 18px;
+    }
+
+    .main {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      gap: 40px;
+      padding: 60px 20px;
+      flex-wrap: nowrap;
+    }
+
+    .intro {
+      max-width: 500px;
+      flex: 1;
+    }
+
+    .intro h1 {
+      font-size: 24px;
+      margin-bottom: 20px;
+    }
+
+    .intro p {
+      font-size: 16px;
+      line-height: 1.6;
+      margin-bottom: 30px;
+    }
+
+    .avatar {
+      width: 180px;
+      height: 180px;
+      border-radius: 50%;
+      background-image: url('your-photo.jpg'); /* Replace with your photo */
+      background-size: cover;
+      background-position: center;
+      background-color: #ccc;
+      flex-shrink: 0;
+    }
+
+    /* SOCIAL BOXES */
+    .social-container {
+      display: flex;
+      justify-content: space-between;
+      gap: 10px;
+      flex-wrap: nowrap;
+    }
+
+    .social-box {
+      flex: 1;
+      min-width: 70px;
+      background-color: #efefef;
+      border-radius: 8px;
+      padding: 10px;
+      text-align: center;
+      transition: background-color 0.2s;
+    }
+
+    .social-box:hover {
+      background-color: #ddd;
+    }
+
+    .social-box i {
+      font-size: 24px;
+      margin-bottom: 8px;
+    }
+
+    .social-box span {
+      display: block;
+      font-size: 14px;
+    }
+
+    @media (max-width: 768px) {
+      .logo {
+        font-size: 22px;
+      }
+
+      nav a {
+        font-size: 14px;
+      }
+
+      nav {
+        gap: 20px;
+      }
+
+      .intro h1 {
+        font-size: 20px;
+      }
+
+      .intro p {
+        font-size: 14px;
+      }
+
+      .social-box i {
+        font-size: 20px;
+      }
+
+      .social-box span {
+        font-size: 12px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      header {
+        padding: 12px 16px;
+      }
+
+      .logo {
+        font-size: 20px;
+      }
+
+      nav {
+        gap: 12px;
+      }
+
+      nav a {
+        font-size: 12px;
+      }
+
+      .main {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .avatar {
+        margin-bottom: 20px;
+      }
+
+      .social-container {
+        flex-direction: row;
+        gap: 6px;
+      }
+
+      .social-box i {
+        font-size: 18px;
+      }
+
+      .social-box span {
+        font-size: 11px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="logo">Raymond Lim</div>
+    <nav>
+      <a href="#">Home</a>
+      <a href="#">Projects</a>
+      <a href="#">Blog</a>
+      <a href="#">Contact</a>
+    </nav>
+  </header>
+
+  <main class="main">
+    <div class="intro">
+      <h1>Hi! My name is Raymond.</h1>
+      <p>I’m an engineer passionate about problem-solving, design, and precision. Explore this portfolio to see my work and journey.</p>
+
+      <div class="social-container">
+        <a href="https://instagram.com/yourusername" target="_blank" class="social-box">
+          <i class="fab fa-instagram"></i>
+          <span>Instagram</span>
+        </a>
+        <a href="https://instagram.com/kreatif3d" target="_blank" class="social-box">
+          <i class="fab fa-instagram"></i>
+          <span>Kreatif 3D</span>
+        </a>
+        <a href="https://linkedin.com/in/yourusername" target="_blank" class="social-box">
+          <i class="fab fa-linkedin"></i>
+          <span>LinkedIn</span>
+        </a>
+        <a href="https://youtube.com/@yourchannel" target="_blank" class="social-box">
+          <i class="fab fa-youtube"></i>
+          <span>YouTube</span>
+        </a>
+      </div>
+    </div>
+
+    <div class="avatar"></div>
+  </main>
+
+</body>
+</html>
