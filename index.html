@@ -5,15 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Raymond Lim - Engineering Portfolio</title>
 
-  <!-- Font Awesome CDN -->
-  <link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
-    integrity="sha512-TQz+kg3vU/7c1g3cM6pN6PiLTQt5eVxdMN6uRINqZLw0lo5kjZuXz/dZtJZINxR/hY7En3GqNzEoKHZ/4t8RcA=="
-    crossorigin="anonymous"
-    referrerpolicy="no-referrer"
-  />
-
   <style>
     :root {
       --bg-color: #0a192f;
@@ -27,7 +18,6 @@
       box-sizing: border-box;
       margin: 0;
       padding: 0;
-      transition: background-color 0.3s, color 0.3s;
     }
 
     body {
@@ -99,7 +89,7 @@
       width: 180px;
       height: 180px;
       border-radius: 50%;
-      background-image: url('profilepicture.jpg'); /* Replace with your image */
+      background-image: url('profilepicture.jpg'); /* Replace with your actual image */
       background-size: cover;
       background-position: center;
       background-color: #ccc;
@@ -129,10 +119,8 @@
       background-color: var(--social-hover);
     }
 
-    .social-box i {
-      font-size: 24px;
-      margin-bottom: 8px;
-      display: block;
+    .social-box svg {
+      margin-bottom: 6px;
     }
 
     .social-box span {
@@ -167,10 +155,6 @@
 
       .intro p {
         font-size: 14px;
-      }
-
-      .social-box i {
-        font-size: 20px;
       }
 
       .social-box span {
@@ -209,10 +193,6 @@
         gap: 6px;
       }
 
-      .social-box i {
-        font-size: 18px;
-      }
-
       .social-box span {
         font-size: 11px;
       }
@@ -224,7 +204,10 @@
   <header>
     <div class="logo">Raymond Lim</div>
     <nav>
-      <a href="index.html">Home</a>
+      <a href="#">Home</a>
+      <a href="#">Projects</a>
+      <a href="#">Blog</a>
+      <a href="#">Contact</a>
     </nav>
   </header>
 
@@ -235,19 +218,34 @@
 
       <div class="social-container">
         <a href="https://instagram.com/raymond_oscar" target="_blank" class="social-box">
-          <i class="fab fa-instagram"></i>
+          <!-- Instagram SVG -->
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="#f0f0f0" viewBox="0 0 24 24">
+            <path d="M12 2.2c3.2 0 3.6 0 4.9.1 1.3.1 2.1.3 2.6.6.5.3.9.7 1.2 1.2.3.5.5 1.3.6 2.6.1 1.3.1 1.7.1 4.9s0 3.6-.1 4.9c-.1 1.3-.3 2.1-.6 2.6-.3.5-.7.9-1.2 1.2-.5.3-1.3.5-2.6.6-1.3.1-1.7.1-4.9.1s-3.6 0-4.9-.1c-1.3-.1-2.1-.3-2.6-.6-.5-.3-.9-.7-1.2-1.2-.3-.5-.5-1.3-.6-2.6C2.2 15.6 2.2 15.2 2.2 12s0-3.6.1-4.9c.1-1.3.3-2.1.6-2.6.3-.5.7-.9 1.2-1.2.5-.3 1.3-.5 2.6-.6C8.4 2.2 8.8 2.2 12 2.2zM12 5.5A6.5 6.5 0 1 0 12 18.5 6.5 6.5 0 0 0 12 5.5zm0 10.7a4.2 4.2 0 1 1 0-8.4 4.2 4.2 0 0 1 0 8.4zm4.8-10.8a1.5 1.5 0 1 0 0 3.0 1.5 1.5 0 0 0 0-3.0z"/>
+          </svg>
           <span>Instagram</span>
         </a>
+
         <a href="https://instagram.com/kreatif3d.id" target="_blank" class="social-box">
-          <i class="fab fa-instagram"></i>
-          <span>Kreatif 3D Instagram</span>
+          <!-- Instagram again -->
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="#f0f0f0" viewBox="0 0 24 24">
+            <path d="M12 2.2c3.2 0 3.6 0 4.9.1 1.3.1 2.1.3 2.6.6.5.3.9.7 1.2 1.2.3.5.5 1.3.6 2.6.1 1.3.1 1.7.1 4.9s0 3.6-.1 4.9c-.1 1.3-.3 2.1-.6 2.6-.3.5-.7.9-1.2 1.2-.5.3-1.3.5-2.6.6-1.3.1-1.7.1-4.9.1s-3.6 0-4.9-.1c-1.3-.1-2.1-.3-2.6-.6-.5-.3-.9-.7-1.2-1.2-.3-.5-.5-1.3-.6-2.6C2.2 15.6 2.2 15.2 2.2 12s0-3.6.1-4.9c.1-1.3.3-2.1.6-2.6.3-.5.7-.9 1.2-1.2.5-.3 1.3-.5 2.6-.6C8.4 2.2 8.8 2.2 12 2.2zM12 5.5A6.5 6.5 0 1 0 12 18.5 6.5 6.5 0 0 0 12 5.5zm0 10.7a4.2 4.2 0 1 1 0-8.4 4.2 4.2 0 0 1 0 8.4zm4.8-10.8a1.5 1.5 0 1 0 0 3.0 1.5 1.5 0 0 0 0-3.0z"/>
+          </svg>
+          <span>Kreatif 3D</span>
         </a>
+
         <a href="https://linkedin.com/in/im-raymond-lim" target="_blank" class="social-box">
-          <i class="fab fa-linkedin"></i>
+          <!-- LinkedIn SVG -->
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="#f0f0f0" viewBox="0 0 24 24">
+            <path d="M4.98 3.5c0 1.381-1.12 2.5-2.5 2.5S0 4.881 0 3.5 1.12 1 2.5 1s2.5 1.119 2.5 2.5zM0 24h5V8H0v16zm7.5 0h5v-8.4c0-2.5 3-2.7 3 0V24h5V13.2c0-6.1-6.6-5.9-8.3-2.9V8h-5v16z"/>
+          </svg>
           <span>LinkedIn</span>
         </a>
+
         <a href="https://youtube.com/@raymondoscarlim" target="_blank" class="social-box">
-          <i class="fab fa-youtube"></i>
+          <!-- YouTube SVG -->
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="#f0f0f0" viewBox="0 0 24 24">
+            <path d="M23.5 6.2s-.2-1.6-.8-2.3c-.7-.9-1.5-1.1-3.2-1.2-4.5-.3-11.3-.3-11.3-.3s-6.8 0-11.3.3c-1.7.1-2.5.3-3.2 1.2-.6.7-.8 2.3-.8 2.3S0 8.3 0 10.4v3.2c0 2.1.2 4.2.2 4.2s.2 1.6.8 2.3c.7.9 1.5 1.1 3.2 1.2 4.5.3 11.3.3 11.3.3s6.8 0 11.3-.3c1.7-.1 2.5-.3 3.2-1.2.6-.7.8-2.3.8-2.3s.2-2.1.2-4.2v-3.2c0-2.1-.2-4.2-.2-4.2zM9.5 15.6V8.4l6.4 3.6-6.4 3.6z"/>
+          </svg>
           <span>YouTube</span>
         </a>
       </div>
