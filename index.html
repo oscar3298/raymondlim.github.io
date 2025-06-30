@@ -5,10 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Raymond Lim - Engineering Portfolio</title>
 
-  <!-- Replace this with your actual Adobe Fonts project link -->
+  <!-- Replace with your Adobe Fonts project link for Neue Haas Grotesk -->
   <link rel="stylesheet" href="https://use.typekit.net/xyz123.css" />
   <style>
-    /* Basic Reset */
     * {
       box-sizing: border-box;
       margin: 0;
@@ -21,45 +20,54 @@
       color: #000;
     }
 
+    /* Header */
     header {
-      background-color: #f5f5f5;
-      padding: 20px 40px;
       display: flex;
       justify-content: space-between;
       align-items: center;
+      padding: 20px 40px;
+      background-color: #f5f5f5;
       flex-wrap: nowrap;
-      flex-shrink: 0;
+      white-space: nowrap;
     }
 
     .logo {
       font-size: 28px;
       font-weight: bold;
-      white-space: nowrap;
+      flex-shrink: 0;
     }
 
     nav {
-      margin-left: auto;
+      display: flex;
+      gap: 30px;
+      justify-content: flex-end;
+      flex-shrink: 1;
+      overflow-x: auto;
     }
 
     nav a {
-      margin-left: 30px;
       text-decoration: none;
       color: #000;
-      font-weight: bold;
+      font-weight: 600;
       font-size: 18px;
-      white-space: nowrap;
     }
 
+    /* Main Section */
     .main {
       display: flex;
       justify-content: center;
       align-items: center;
       padding: 80px 20px;
       flex-wrap: wrap;
+      background: url('Untitled presentation.jpg') no-repeat center center / cover;
+      min-height: calc(100vh - 100px);
     }
 
     .intro {
       max-width: 500px;
+      background-color: rgba(255, 255, 255, 0.85);
+      padding: 20px;
+      border-radius: 8px;
       margin-right: 50px;
     }
 
@@ -71,7 +79,6 @@
     .intro p {
       line-height: 1.6;
       font-size: 16px;
-      color: #333;
       margin-bottom: 10px;
     }
 
@@ -79,20 +86,20 @@
       width: 180px;
       height: 180px;
       border-radius: 50%;
-      background-image: url('your-photo.jpg'); /* Replace with your image file */
+      background-image: url('your-photo.jpg'); /* Replace this with your own image */
       background-size: cover;
       background-position: center;
       background-color: #ccc;
     }
 
+    /* Responsive behavior */
     @media (max-width: 768px) {
       .logo {
         font-size: 22px;
       }
 
       nav a {
-        font-size: 16px;
-        margin-left: 20px;
+        font-size: 14px;
       }
 
       .intro h1 {
@@ -101,6 +108,29 @@
 
       .intro p {
         font-size: 14px;
+      }
+
+      .main {
+        flex-direction: column;
+        text-align: center;
+        background-position: top center;
+      }
+
+      .intro {
+        margin: 0 0 30px 0;
+      }
+
+      .avatar {
+        margin: 0 auto;
+      }
+
+      header {
+        flex-wrap: nowrap;
+      }
+
+      nav {
+        flex-shrink: 1;
+        overflow-x: auto;
       }
     }
 
@@ -114,22 +144,8 @@
       }
 
       nav a {
-        font-size: 14px;
+        font-size: 12px;
         margin-left: 16px;
-      }
-
-      .main {
-        flex-direction: column;
-        text-align: center;
-      }
-
-      .intro {
-        margin-right: 0;
-        margin-bottom: 30px;
-      }
-
-      .avatar {
-        margin: 0 auto;
       }
     }
   </style>
@@ -139,18 +155,18 @@
   <header>
     <div class="logo">Raymond Lim</div>
     <nav>
-      <a href="index.html">Home</a>
-      <a href="projects.html">Projects</a>
-      <a href="blogs.html">Blog</a>
-      <a href="contactme.html">Contact Me</a>
+      <a href="#">Home</a>
+      <a href="#">Projects</a>
+      <a href="#">Blog</a>
+      <a href="#">Contact</a>
     </nav>
   </header>
 
   <main class="main">
     <div class="intro">
       <h1>Hi! My name is Raymond.</h1>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus erat dui, efficitur eu justo sit amet, faucibus ultricies quam.</p>
-      <p>Cras convallis urna purus, in ornare leo pulvinar et. Aenean a ipsum odio. Duis posuere vestibulum lectus sit amet maximus.</p>
+      <p>I am an engineer passionate about solving real-world problems through technology, design, and innovation.</p>
+      <p>Feel free to explore my work, thoughts, and how to get in touch.</p>
     </div>
     <div class="avatar"></div>
   </main>
