@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Raymond Lim - Engineering Portfolio</title>
+  <title>Raymond Lim - Projects</title>
 
   <style>
     :root {
@@ -60,76 +60,52 @@
       font-weight: bold;
     }
 
+    /* Main: projects grid pushed to the right on desktop */
     .main {
+      flex: 1;
       display: flex;
-      flex-direction: row;
-      justify-content: center;
-      align-items: center;
-      gap: 40px;
-      padding: 60px 20px;
-      flex-wrap: nowrap;
-      flex: 1;
+      justify-content: flex-end;
+      padding: 60px 40px;
     }
 
-    .intro {
-      max-width: 500px;
-      flex: 1;
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(260px, 380px));
+      gap: 30px;
     }
 
-    .intro h1 {
-      font-size: 24px;
-      margin-bottom: 20px;
-      font-weight: bold;
+    .project-card {
+      background-color: #ffffff;
+      color: #000000;
+      border-radius: 4px;
+      overflow: hidden;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+      transition: transform 0.2s ease;
     }
 
-    .intro p {
-      font-size: 16px;
-      line-height: 1.6;
-      margin-bottom: 30px;
-      font-weight: normal;
+    .project-card:hover {
+      transform: translateY(-4px);
     }
 
-    .avatar {
-      width: 180px;
-      height: 180px;
-      border-radius: 50%;
-      background-image: url('profilepicture.jpg'); /* Replace with your actual image path */
-      background-size: cover;
-      background-position: center;
-      background-color: #ccc;
-      flex-shrink: 0;
-    }
-
-    .social-container {
-      display: flex;
-      justify-content: space-between;
-      gap: 10px;
-      flex-wrap: nowrap;
-    }
-
-    .social-box {
-      flex: 1;
-      min-width: 70px;
-      background-color: var(--social-bg);
-      border-radius: 8px;
-      padding: 10px;
-      text-align: center;
-      transition: background-color 0.2s;
-      color: var(--text-color);
-      text-decoration: none;
-    }
-
-    .social-box:hover {
-      background-color: var(--social-hover);
-    }
-
-    .social-box svg {
-      margin-bottom: 6px;
-    }
-
-    .social-box span {
+    .project-card img {
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
       display: block;
-      font-size: 14px;
+    }
+
+    .project-info {
+      padding: 16px 20px;
+    }
+
+    .project-info h2 {
+      font-size: 1.5rem;
+      margin-bottom: 4px;
+    }
+
+    .project-info p {
+      font-size: 1rem;
+      color: #333;
     }
 
     footer {
@@ -140,6 +116,15 @@
       font-size: 14px;
     }
 
+    /* Tablet / smaller desktops: keep two columns but center */
+    @media (max-width: 1024px) {
+      .main {
+        justify-content: center;
+        padding: 40px 24px;
+      }
+    }
+
+    /* Phones: stack into a single centered column */
     @media (max-width: 768px) {
       .logo {
         font-size: 22px;
@@ -153,16 +138,19 @@
         gap: 20px;
       }
 
-      .intro h1 {
-        font-size: 20px;
+      .main {
+        justify-content: center;
+        padding: 30px 20px;
       }
 
-      .intro p {
-        font-size: 14px;
+      .projects-grid {
+        grid-template-columns: minmax(260px, 480px);
+        gap: 24px;
       }
 
-      .social-box span {
-        font-size: 12px;
+      .project-card img {
+        height: auto;
+        aspect-ratio: 16 / 10;
       }
     }
 
@@ -183,37 +171,24 @@
         font-size: 12px;
       }
 
-      .main {
-        flex-direction: column-reverse;
-        text-align: center;
-      }
-
-      .avatar {
-        margin-bottom: 20px;
-      }
-
-      .social-container {
-        flex-direction: row;
-        gap: 6px;
-      }
-
-      .social-box span {
-        font-size: 11px;
+      .project-info h2 {
+        font-size: 1.25rem;
       }
     }
   </style>
 </head>
 <body>
+
   <header>
-    <h1>Raymond Lim</h1>
+    <div class="logo">Raymond Lim</div>
     <nav>
       <a href="index.html">Home</a>
       <a href="projects.html">Projects</a>
-      <a href="projects.html">LinkedIn</a>
+      <a href="zzz.html">LinkedIn</a>
     </nav>
   </header>
 
-  <main>
+  <main class="main">
     <section class="projects-grid">
       <!-- Replace src with your own image path or URL -->
       <article class="project-card">
@@ -251,7 +226,8 @@
   </main>
 
   <footer>
-    &copy; Raymond Lim. All Rights Reserved.
+    © Raymond Lim. All Rights Reserved.
   </footer>
+
 </body>
 </html>
