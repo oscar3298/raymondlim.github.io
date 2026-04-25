@@ -1,10 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Raymond Lim</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Raymond Lim - Engineering Portfolio</title>
+
   <style>
+    :root {
+      --bg-color: #0a192f;
+      --text-color: #f0f0f0;
+      --header-bg: #112240;
+      --social-bg: #1c2b4a;
+      --social-hover: #233554;
+    }
+
     * {
       box-sizing: border-box;
       margin: 0;
@@ -12,125 +21,184 @@
     }
 
     body {
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
-      background-color: #0d1f3c;
-      color: #ffffff;
+      font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+      font-weight: normal;
+      background-color: var(--bg-color);
+      color: var(--text-color);
       min-height: 100vh;
       display: flex;
       flex-direction: column;
     }
 
-    /* Header */
     header {
-      background-color: #0a1a33;
-      padding: 20px 40px;
       display: flex;
-      justify-content: space-between;
       align-items: center;
+      justify-content: space-between;
+      padding: 20px 40px;
+      background-color: var(--header-bg);
+      white-space: nowrap;
+      overflow-x: auto;
     }
 
-    header h1 {
-      font-size: 1.5rem;
-      font-weight: 700;
+    .logo {
+      font-size: 28px;
+      flex-shrink: 0;
+      font-weight: bold;
+    }
+
+    nav {
+      display: flex;
+      gap: 30px;
+      margin-left: auto;
+      margin-right: 20px;
     }
 
     nav a {
-      color: #ffffff;
       text-decoration: none;
-      font-weight: 600;
-      font-size: 1.1rem;
+      color: var(--text-color);
+      font-size: 18px;
+      font-weight: bold;
     }
 
-    nav a:hover {
-      opacity: 0.8;
-    }
-
-    /* Main content */
-    main {
-      flex: 1;
-      padding: 60px 40px;
+    .main {
       display: flex;
+      flex-direction: row;
       justify-content: center;
+      align-items: center;
+      gap: 40px;
+      padding: 60px 20px;
+      flex-wrap: nowrap;
+      flex: 1;
     }
 
-    .projects-grid {
-      display: grid;
-      grid-template-columns: repeat(2, minmax(280px, 400px));
-      gap: 30px;
-      max-width: 900px;
-      width: 100%;
+    .intro {
+      max-width: 500px;
+      flex: 1;
     }
 
-    .project-card {
-      background-color: #ffffff;
-      color: #000000;
-      border-radius: 4px;
-      overflow: hidden;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
-      transition: transform 0.2s ease;
+    .intro h1 {
+      font-size: 24px;
+      margin-bottom: 20px;
+      font-weight: bold;
     }
 
-    .project-card:hover {
-      transform: translateY(-4px);
+    .intro p {
+      font-size: 16px;
+      line-height: 1.6;
+      margin-bottom: 30px;
+      font-weight: normal;
     }
 
-    .project-card img {
-      width: 100%;
-      height: 220px;
-      object-fit: cover;
-      display: block;
+    .avatar {
+      width: 180px;
+      height: 180px;
+      border-radius: 50%;
+      background-image: url('profilepicture.jpg'); /* Replace with your actual image path */
+      background-size: cover;
+      background-position: center;
+      background-color: #ccc;
+      flex-shrink: 0;
     }
 
-    .project-info {
-      padding: 16px 20px;
+    .social-container {
+      display: flex;
+      justify-content: space-between;
+      gap: 10px;
+      flex-wrap: nowrap;
     }
 
-    .project-info h2 {
-      font-size: 1.5rem;
-      margin-bottom: 4px;
-    }
-
-    .project-info p {
-      font-size: 1rem;
-      color: #333;
-    }
-
-    /* Footer */
-    footer {
-      background-color: #0a1a33;
+    .social-box {
+      flex: 1;
+      min-width: 70px;
+      background-color: var(--social-bg);
+      border-radius: 8px;
+      padding: 10px;
       text-align: center;
-      padding: 16px;
-      font-size: 0.9rem;
+      transition: background-color 0.2s;
+      color: var(--text-color);
+      text-decoration: none;
     }
 
-    /* Responsive — stack cards vertically on phones/narrow screens */
-    @media (max-width: 1024px) {
-      .projects-grid {
-        grid-template-columns: minmax(260px, 500px);
-        justify-content: center;
-        gap: 24px;
+    .social-box:hover {
+      background-color: var(--social-hover);
+    }
+
+    .social-box svg {
+      margin-bottom: 6px;
+    }
+
+    .social-box span {
+      display: block;
+      font-size: 14px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background-color: #112240;
+      color: #f0f0f0;
+      font-size: 14px;
+    }
+
+    @media (max-width: 768px) {
+      .logo {
+        font-size: 22px;
       }
-      header {
-        padding: 16px 20px;
+
+      nav a {
+        font-size: 14px;
       }
-      main {
-        padding: 30px 20px;
+
+      nav {
+        gap: 20px;
       }
-      .project-card img {
-        height: auto;
-        aspect-ratio: 16 / 10;
+
+      .intro h1 {
+        font-size: 20px;
+      }
+
+      .intro p {
+        font-size: 14px;
+      }
+
+      .social-box span {
+        font-size: 12px;
       }
     }
 
     @media (max-width: 480px) {
-      header h1 {
-        font-size: 1.25rem;
+      header {
+        padding: 12px 16px;
       }
+
+      .logo {
+        font-size: 20px;
+      }
+
+      nav {
+        gap: 12px;
+      }
+
       nav a {
-        font-size: 1rem;
+        font-size: 12px;
       }
-      .project-info h2 {
-        font-size: 1.25rem;
+
+      .main {
+        flex-direction: column-reverse;
+        text-align: center;
+      }
+
+      .avatar {
+        margin-bottom: 20px;
+      }
+
+      .social-container {
+        flex-direction: row;
+        gap: 6px;
+      }
+
+      .social-box span {
+        font-size: 11px;
       }
     }
   </style>
