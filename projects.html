@@ -65,12 +65,19 @@
       flex: 1;
       display: flex;
       justify-content: flex-end;
+      /* Keep the grid pinned to the top so it doesn't get stretched vertically. */
+      align-items: flex-start;
       padding: 60px 40px;
     }
 
     .projects-grid {
       display: grid;
+      /* Fixed column track size keeps each card the same width
+         regardless of how many cards are present. */
       grid-template-columns: repeat(2, minmax(260px, 380px));
+      /* Auto rows size to content; cards align to the top of their track. */
+      grid-auto-rows: max-content;
+      align-items: start;
       gap: 30px;
     }
 
@@ -199,14 +206,18 @@
         </div>
       </article>
 
+      
+        Additional project slots — uncomment and update as you add more projects.
+        The grid track size above keeps each card the same dimensions as the one above.
+
       <article class="project-card">
-        <img src="images/project2.jpg" alt="Project 2">
+        <img src="project1_headerimage.jpg" alt="Project 2">
         <div class="project-info">
-          <h2>Project Title</h2>
+          <h2>Project Two</h2>
           <p>Project Description</p>
         </div>
       </article>
-
+<!--
       <article class="project-card">
         <img src="images/project3.jpg" alt="Project 3">
         <div class="project-info">
@@ -222,6 +233,7 @@
           <p>Project Description</p>
         </div>
       </article>
+      -->
     </section>
   </main>
 
